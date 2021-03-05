@@ -31,6 +31,15 @@ UM_EXPORT_MODULE(CTKAdSettingsManager)
   [[_moduleRegistry getModuleImplementingProtocol:@protocol(UMAppLifecycleService)] registerAppLifecycleListener:self];
 }
 
+UM_EXPORT_METHOD_AS(setAdvertiserTrackingEnabled,
+                    setAdvertiserTrackingEnabled:(BOOL)enabled
+                    resolve:(UMPromiseResolveBlock)resolve
+                    reject:(UMPromiseRejectBlock)reject)
+{
+  [FBAdSettings setAdvertiserTrackingEnabled:enabled];
+  resolve(nil);
+}
+
 UM_EXPORT_METHOD_AS(addTestDevice,
                     addTestDevice:(NSString *)deviceHash
                     resolve:(UMPromiseResolveBlock)resolver

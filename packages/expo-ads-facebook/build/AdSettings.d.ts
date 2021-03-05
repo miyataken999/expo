@@ -5,6 +5,10 @@ declare const _default: {
      */
     readonly currentDeviceHash: string;
     /**
+     * Sets whether Facebook SDK should enable advertising tracking.
+     */
+    setAdvertiserTrackingEnabled(enabled: boolean): void;
+    /**
      * Registers given device with `deviceHash` to receive test Facebook ads.
      */
     addTestDevice(deviceHash: string): void;

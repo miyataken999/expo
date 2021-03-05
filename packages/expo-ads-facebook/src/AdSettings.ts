@@ -14,6 +14,13 @@ export default {
   },
 
   /**
+   * Sets whether Facebook SDK should enable advertising tracking.
+   */
+  setAdvertiserTrackingEnabled(enabled: boolean): void {
+    CTKAdSettingsManager.setAdvertiserTrackingEnabled(enabled);
+  },
+
+  /**
    * Registers given device with `deviceHash` to receive test Facebook ads.
    */
   addTestDevice(deviceHash: string): void {
